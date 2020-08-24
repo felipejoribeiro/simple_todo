@@ -1,24 +1,42 @@
-.azul{
-    color: blue;
+/* Entirely written by Felipe J. O. Ribeiro. */
+/* file of the Version 0.1 */
+/* Main css file with fashion definitions */
+
+/*! Global variables definition */
+:root {
+  --clr-dark: rgb(13 , 17 , 19);
+  --clr-light: #fff;
+  --clr-accent: rgb(222 ,52 , 0);
+  --clr-accent-dark: rgb(163 , 38 , 0);
+  --clr-secondary: rgb(0 , 62 , 163);
 }
 
-*{
-  box-sizing: content-box;
+/*! General parameter definitions */
+/* Global stuff */
+*,
+*::before,
+*::after{
+  box-sizing: content-box;               /*Define length references*/
+  padding: 0px;                          /*Reset default parameters*/
+  margin: 0px;                           /*Reset default parameters*/
   /* border: 1px solid black; */
 }
 
-/* Typing effect:*/
+
+
+
+/*! TO-DO elements */
 
 .erase_button{
-  width: 8px;
-  height: 15px;
+  width: 1em;
+  height: 1em;
   background-image: url(https://image.flaticon.com/icons/svg/847/847579.svg);
   background-repeat: no-repeat;
   background-size: auto;
 }
 
 .done{
-  color:red;
+  color:rgb(255, 0, 0);
 }
 
 .wrapper {
@@ -28,6 +46,8 @@
   justify-content: center;
 }
 
+
+/*! Typing effect:*/
 .typing-demo {
   width: 42ch;
   animation: typing 4s steps(42), blink 0.5s step-end infinite alternate;
@@ -39,12 +59,13 @@
   font-size: 2em;
 }
 
+/* Animation keyframe definition */
 @keyframes typing {
   from {
     width: 0
   }
 }
-    
+/* Animation keyframe definition */
 @keyframes blink {
   50% {
     border-color: transparent
