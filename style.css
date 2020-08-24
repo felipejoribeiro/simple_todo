@@ -1,0 +1,53 @@
+.azul{
+    color: blue;
+}
+
+*{
+  box-sizing: content-box;
+  /* border: 1px solid black; */
+}
+
+/* Typing effect:*/
+
+.erase_button{
+  width: 8px;
+  height: 15px;
+  background-image: url(https://image.flaticon.com/icons/svg/847/847579.svg);
+  background-repeat: no-repeat;
+  background-size: auto;
+}
+
+.done{
+  color:red;
+}
+
+.wrapper {
+  height: 5vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.typing-demo {
+  width: 42ch;
+  animation: typing 4s steps(42), blink 0.5s step-end infinite alternate;
+  white-space: nowrap;
+  overflow: hidden;
+  /* border: 3px solid; */
+  border-right: 3px solid;
+  font-family: monospace;
+  font-size: 2em;
+}
+
+@keyframes typing {
+  from {
+    width: 0
+  }
+}
+    
+@keyframes blink {
+  50% {
+    border-color: transparent
+  }
+  
+}
