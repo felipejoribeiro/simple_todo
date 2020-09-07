@@ -15,14 +15,17 @@
 *,
 *::before,
 *::after {
-  -webkit-box-sizing: content-box;
-          box-sizing: content-box;
+  box-sizing: content-box;
   /*Define length references*/
   padding: 0px;
   /*Reset default parameters*/
   margin: 0px;
   /*Reset default parameters*/
   /* border: 1px solid black; */
+}
+
+body {
+  text-align: center;
 }
 
 /*! TO-DO elements */
@@ -40,22 +43,15 @@
 
 .wrapper {
   height: 5vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
 }
 
 /*! Typing effect:*/
 .typing-demo {
   width: 42ch;
-  -webkit-animation: typing 4s steps(42), blink 0.5s step-end infinite alternate;
-          animation: typing 4s steps(42), blink 0.5s step-end infinite alternate;
+  animation: typing 4s steps(42), blink 0.5s step-end infinite alternate;
   white-space: nowrap;
   overflow: hidden;
   /* border: 3px solid; */
@@ -65,11 +61,6 @@
 }
 
 /* Animation keyframe definition */
-@-webkit-keyframes typing {
-  from {
-    width: 0;
-  }
-}
 @keyframes typing {
   from {
     width: 0;
@@ -77,11 +68,6 @@
 }
 
 /* Animation keyframe definition */
-@-webkit-keyframes blink {
-  50% {
-    border-color: transparent;
-  }
-}
 @keyframes blink {
   50% {
     border-color: transparent;
