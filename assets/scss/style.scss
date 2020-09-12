@@ -1,76 +1,100 @@
-/* Entirely written by Felipe J. O. Ribeiro. */
-/* file of the Version 0.1 */
-/* Main css file with fashion definitions */
+// Entirely written by Felipe J. O. Ribeiro. 
+// file of the Version 0.1 
+// Main css file with fashion definitions 
 
-/*! Global variables definition */
+//* Global variables definition 
 :root {
-    --clr-dark: rgb(13 , 17 , 19);
-    --clr-light: #fff;
-    --clr-accent: rgb(222 ,52 , 0);
-    --clr-accent-dark: rgb(163 , 38 , 0);
-    --clr-secondary: rgb(0 , 62 , 163);
+  --clr-dark: rgb(13 , 17 , 19);
+  --clr-light: #fff;
+  --clr-accent: rgb(222 ,52 , 0);
+  --clr-accent-dark: rgb(163 , 38 , 0);
+  --clr-secondary: rgb(0 , 62 , 163);
+}
+
+//* General parameter definitions 
+// Global stuff 
+*,
+*::before,
+*::after{
+  box-sizing: content-box;     //Define length references
+  padding: 0px;                //Reset default parameters
+  margin: 0px;                 //Reset default parameters
+  // outline: 1px solid black; 
+}
+
+html{
+  font-size: 62.5%;
+}
+
+body{
+background: LINEAR-GRADIENT(TO RIGHT, RGB(198, 206, 167), RGB(149, 125, 177));
+  height: 100vh;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+  
+  
+//! TO-DO elements */
+
+.container{
+  font-size: 2em;
+  margin: calc(50% - 10rem) 0 0 0 ;
+}
+
+.principal_card{
+  padding: 2rem 3rem;
+  background-color: rgba(0 , 0 , 0 , 0.5);
+}
+
+.erase_button{
+  width: 1em;
+  height: 1em;
+  background-image: url(https://image.flaticon.com/icons/svg/847/847579.svg);
+  background-repeat: no-repeat;
+  background-size: auto;
+}
+
+.done{
+  color:rgb(255, 0, 0);
+
+}
+
+li{
+  list-style: none;
+}
+
+/*! Typing effect:*/
+
+.wrapper {
+  height: 5vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.typing-demo {
+  width: 15ch;
+  animation: typing 1.4s steps(15), blink 0.5s step-end infinite alternate;
+  white-space: nowrap;
+  overflow: hidden;
+  /* border: 3px solid; */
+  border-right: 3px solid;
+  font-family: monospace;
+  font-size: 2em;
+}
+
+/* Animation keyframe definition */
+@keyframes typing {
+  from {
+    width: 0
+  }
+}
+/* Animation keyframe definition */
+@keyframes blink {
+  50% {
+    border-color: transparent
   }
   
-  /*! General parameter definitions */
-  /* Global stuff */
-  *,
-  *::before,
-  *::after{
-    box-sizing: content-box;               /*Define length references*/
-    padding: 0px;                          /*Reset default parameters*/
-    margin: 0px;                           /*Reset default parameters*/
-    /* border: 1px solid black; */
-  }
-  
-  body{
-    text-align: center;
-  }
-  
-  
-  /*! TO-DO elements */
-  
-  .erase_button{
-    width: 1em;
-    height: 1em;
-    background-image: url(https://image.flaticon.com/icons/svg/847/847579.svg);
-    background-repeat: no-repeat;
-    background-size: auto;
-  }
-  
-  .done{
-    color:rgb(255, 0, 0);
-  }
-  
-  .wrapper {
-    height: 5vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  
-  /*! Typing effect:*/
-  .typing-demo {
-    width: 42ch;
-    animation: typing 4s steps(42), blink 0.5s step-end infinite alternate;
-    white-space: nowrap;
-    overflow: hidden;
-    /* border: 3px solid; */
-    border-right: 3px solid;
-    font-family: monospace;
-    font-size: 2em;
-  }
-  
-  /* Animation keyframe definition */
-  @keyframes typing {
-    from {
-      width: 0
-    }
-  }
-  /* Animation keyframe definition */
-  @keyframes blink {
-    50% {
-      border-color: transparent
-    }
-    
-  }
+}
