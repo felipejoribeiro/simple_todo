@@ -22,13 +22,15 @@ body {
   background: LINEAR-GRADIENT(TO RIGHT, RGB(198, 206, 167), RGB(149, 125, 177));
   height: 100vh;
   text-align: center;
-  display: flex;
-  flex-direction: column;
+}
+
+li {
+  list-style: none;
 }
 
 .container {
   font-size: 2em;
-  margin: calc(50% - 10rem) 0 0 0;
+  margin: 10rem 0 0 0;
 }
 
 .principal_card {
@@ -46,10 +48,6 @@ body {
 
 .done {
   color: red;
-}
-
-li {
-  list-style: none;
 }
 
 /*! Typing effect:*/
