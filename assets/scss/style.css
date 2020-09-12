@@ -1,7 +1,3 @@
-/* Entirely written by Felipe J. O. Ribeiro. */
-/* file of the Version 0.1 */
-/* Main css file with fashion definitions */
-/*! Global variables definition */
 :root {
   --clr-dark: rgb(13 , 17 , 19);
   --clr-light: #fff;
@@ -10,22 +6,36 @@
   --clr-secondary: rgb(0 , 62 , 163);
 }
 
-/*! General parameter definitions */
-/* Global stuff */
 *,
 *::before,
 *::after {
-  -webkit-box-sizing: content-box;
-          box-sizing: content-box;
-  /*Define length references*/
+  box-sizing: content-box;
   padding: 0px;
-  /*Reset default parameters*/
   margin: 0px;
-  /*Reset default parameters*/
-  /* border: 1px solid black; */
 }
 
-/*! TO-DO elements */
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background: LINEAR-GRADIENT(TO RIGHT, RGB(198, 206, 167), RGB(149, 125, 177));
+  height: 100vh;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  font-size: 2em;
+  margin: calc(50% - 10rem) 0 0 0;
+}
+
+.principal_card {
+  padding: 2rem 3rem;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
 .erase_button {
   width: 1em;
   height: 1em;
@@ -38,24 +48,21 @@
   color: red;
 }
 
-.wrapper {
-  height: 5vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+li {
+  list-style: none;
 }
 
 /*! Typing effect:*/
+.wrapper {
+  height: 5vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .typing-demo {
-  width: 42ch;
-  -webkit-animation: typing 4s steps(42), blink 0.5s step-end infinite alternate;
-          animation: typing 4s steps(42), blink 0.5s step-end infinite alternate;
+  width: 15ch;
+  animation: typing 1.4s steps(15), blink 0.5s step-end infinite alternate;
   white-space: nowrap;
   overflow: hidden;
   /* border: 3px solid; */
@@ -65,11 +72,6 @@
 }
 
 /* Animation keyframe definition */
-@-webkit-keyframes typing {
-  from {
-    width: 0;
-  }
-}
 @keyframes typing {
   from {
     width: 0;
@@ -77,11 +79,6 @@
 }
 
 /* Animation keyframe definition */
-@-webkit-keyframes blink {
-  50% {
-    border-color: transparent;
-  }
-}
 @keyframes blink {
   50% {
     border-color: transparent;

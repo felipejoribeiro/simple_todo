@@ -25,27 +25,39 @@
 <body>
 
     <!-- Landing page with main to-do functionality -->
-    <h1>Simple TODO</h1>
-    <p id="first">How about getting some stuff done hum? </p>
-    <p class="second"> So here it is. without bullshit. Get your things written and that`s it!</p>
+    
+    <div class="container">
 
-    <div class="wrapper">
-        <div class="typing-demo">
-            Era uma vez um lugarzinho no meio do nada.
+        <h1>Simple TODO</h1>
+        <p id="first">Let the productivity gods bless your journey with this simple list. </p>
+        <p class="second"> All things written here shall be conquered and destroyed.</p>
+
+        <div class="wrapper">
+            <div class="typing-demo">
+                Get stuff done!
+            </div>
         </div>
+
+        <!-- Place for the main website functionality -->
+        <div class="principal_card">
+            
+            <input id="colocar_item" type="text" placeholder="Coloque item">
+            <button id="colocar">Colocar</button> 
+            
+            
+            <ul id="Lista_de_compras">
+                <li>One can delete me by clicking on the eraser. <button id="initial_button" class="erase_button"> </button> </li>
+                <li>But fist, you shall paint me in blood by clicking in me. When i'm a completed task. And dead.  <button class="erase_button"> </button> </li>
+                <li>Bring joy to the gods by killing tasks. <button class="erase_button"> </button> </li>
+            </ul>
+
+        </div>
+
     </div>
 
 
-    <button>botão aqui</button>
 
-    <h1>Lista de compras</h1>
-
-    <input id="colocar_item" type="text" placeholder="Coloque item">
-    <button id="colocar">Colocar</button> 
-
-    <ul id="Lista_de_compras">
-        <li> Nota inicial. <button id="initial_button" class="erase_button"> </button> </li>
-    </ul>
+    <!-- Main javascript file -->
     <script type="text/javascript" src="./assets/scripts/main_routine.js"></script>
 
 </body>

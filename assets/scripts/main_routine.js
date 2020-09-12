@@ -63,7 +63,10 @@ function add_item (where_to_add, where_to_read){
 
 initial_button.addEventListener('click', delete_item);
 lista.children[0].addEventListener('click', red_item);
-
+lista.children[1].addEventListener('click', red_item);
+lista.children[2].addEventListener('click', red_item);
+lista.children[1].children[0].addEventListener('click', delete_item);
+lista.children[2].children[0].addEventListener('click', delete_item);
 
 button.addEventListener("click", function(){
     console.log("click!" + String(i));
