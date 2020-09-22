@@ -9,7 +9,8 @@
 *,
 *::before,
 *::after {
-  box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
   padding: 0px;
   margin: 0px;
 }
@@ -47,20 +48,31 @@ li {
 }
 
 .done {
-  color: red;
+  color: white;
 }
 
 /*! Typing effect:*/
 .wrapper {
   height: 5vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+li {
+  font-size: large;
 }
 
 .typing-demo {
   width: 15ch;
-  animation: typing 1.4s steps(15), blink 0.5s step-end infinite alternate;
+  -webkit-animation: typing 1.4s steps(15), blink 0.5s step-end infinite alternate;
+          animation: typing 1.4s steps(15), blink 0.5s step-end infinite alternate;
   white-space: nowrap;
   overflow: hidden;
   /* border: 3px solid; */
@@ -70,6 +82,11 @@ li {
 }
 
 /* Animation keyframe definition */
+@-webkit-keyframes typing {
+  from {
+    width: 0;
+  }
+}
 @keyframes typing {
   from {
     width: 0;
@@ -77,6 +94,11 @@ li {
 }
 
 /* Animation keyframe definition */
+@-webkit-keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
 @keyframes blink {
   50% {
     border-color: transparent;
